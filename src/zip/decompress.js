@@ -1,13 +1,12 @@
 import { createReadStream, createWriteStream } from 'fs';
-import { pipeline } from "stream/promises";
-import { createGunzip } from "zlib";
-import path, {dirname} from "path";
-import {fileURLToPath} from "url";
+import { pipeline } from 'stream/promises';
+import { createGunzip } from 'zlib';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-
-const folderName = 'files'
-const archiveFile = 'archive.gz'
-const destinationFile = 'fileToCompress.txt'
+const folderName = 'files';
+const archiveFile = 'archive.gz';
+const destinationFile = 'fileToCompress.txt';
 
 export const decompress = async () => {
     try {
@@ -18,7 +17,7 @@ export const decompress = async () => {
 
         await pipeline(readStream, gunzipTransformStream, writeStream);
     } catch (err) {
-        console.error(err)
+        console.error(err);
     }
 };
 

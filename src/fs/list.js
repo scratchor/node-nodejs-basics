@@ -1,8 +1,8 @@
-import {readdir} from "fs/promises";
-import path, {dirname} from "path";
+import { readdir } from 'fs/promises';
+import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const folderName = 'files'
+const folderName = 'files';
 
 export const list = async () => {
     try {

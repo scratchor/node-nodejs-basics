@@ -1,11 +1,11 @@
 const { createHash } = await import('crypto');
 import { createReadStream } from 'fs';
-import path, {dirname} from "path";
-import {fileURLToPath} from "url";
-import {pipeline} from "stream";
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { pipeline } from 'stream';
 
-const folderName = 'files'
-const fileName = 'fileToCalculateHashFor.txt'
+const folderName = 'files';
+const fileName = 'fileToCalculateHashFor.txt';
 
 export const calculateHash = async () => {
     try {
@@ -13,13 +13,13 @@ export const calculateHash = async () => {
         const hash = createHash('sha256');
         const inputFileStream = createReadStream(filePath);
 
-        pipeline(inputFileStream, hash.setEncoding('hex'), process.stdout,(err) => {
+        pipeline(inputFileStream, hash.setEncoding('hex'), process.stdout, (err) => {
             if (err) {
                 throw err;
             }
-        })
+        });
     } catch (err) {
-        console.error(err)
+        console.error(err);
     }
 };
 

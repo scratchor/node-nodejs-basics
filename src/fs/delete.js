@@ -1,9 +1,9 @@
-import {fileURLToPath} from "url";
-import path, {dirname} from "path";
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
 import { unlink } from 'fs/promises';
 
-const folderName = 'files'
-const fileName = 'fileToRemove.txt'
+const folderName = 'files';
+const fileName = 'fileToRemove.txt';
 
 export const remove = async () => {
     try {
