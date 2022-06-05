@@ -1,3 +1,28 @@
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
+import { access } from 'fs/promises';
+import { writeFile } from 'fs';
+
+const folderName = 'files';
+const fileName = 'fresh.txt';
+const content = 'I am fresh and young';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const pathToFile = path.join(__dirname, folderName, fileName);
+
 export const create = async () => {
-    // Write your code here 
+  try {
+    await access(pathToFile);
+    throw new Error('FS operation failed');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+
+      writeFile(pathToFile, content, (err) => {
+        if (err) throw err;
+      });
+    } else {
+      console.error(err);
+    }
+  }
 };
+
+create();
