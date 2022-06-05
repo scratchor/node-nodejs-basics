@@ -12,6 +12,7 @@
     "fs:read": "node src/fs/read.js",
     "cli:env": "set RSS_theBest=true&&set RSS_position=1&&node src/cli/env.js",
     "cli:args": "node src/cli/args.js --rss=cool --year=2022",
+    "modules:cjsToEsm": "node src/modules/cjsToEsm.mjs",
     "hash:calcHash": "node src/hash/calcHash.js",
     "streams:read": "node src/streams/read.js",
     "streams:write": "node src/streams/write.js",
