@@ -6,7 +6,13 @@
   "scripts": {
     "cli:args": "node src/cli/args.js --rss cool --year 2022",
     "cli:env": "set RSS_theBest=true&&set RSS_position=first node src/cli/env.js",
-    "cli:env_windows": "set RSS_theBest=true&&set RSS_position=first&&node src/cli/env.js"
+    "cli:env_windows": "set RSS_theBest=true&&set RSS_position=first&&node src/cli/env.js",
+    "fs:copy": "node src/fs/copy.js",
+    "fs:create": "node src/fs/create.js",
+    "fs:rename": "node src/fs/rename.js",
+    "fs:delete": "node src/fs/delete.js",
+    "fs:list": "node src/fs/list.js",
+    "fs:read": "node src/fs/read.js"
   },
   "repository": {
     "type": "git",
