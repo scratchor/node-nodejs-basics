@@ -21,7 +21,8 @@
     "wt:worker": "node src/wt/worker.js",
     "wt:main": "node src/wt/main.js",
     "zip:compress": "node src/zip/compress.js",
-    "zip:decompress": "node src/zip/decompress.js"
+    "zip:decompress": "node src/zip/decompress.js",
+    "cp:cp": "node src/cp/cp.js I am argument"
   },
   "repository": {
     "type": "git",
